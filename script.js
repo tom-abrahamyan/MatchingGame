@@ -1,6 +1,6 @@
 let game = {
   width: 4,
-  height: 2,
+  height: 4,
   size: 80,
   dictionary: "abcdefghijklmnopqrstuvwxyz",
   waitingBox: undefined,
@@ -64,8 +64,8 @@ function bindEvents() {
           game.waitingBox = undefined;
           game.foundCount++;
           if(game.foundCount === boxCount / 2){
-            container.innerHTML = "<h2>Congratulations, you won!</h2>";
-
+            // container.innerHTML = "<h2>Congratulations, you won!</h2>";
+            container.innerHTML = "<img src='victory.gif' />";
             setTimeout(() => {
               location.reload();
             },3000)
